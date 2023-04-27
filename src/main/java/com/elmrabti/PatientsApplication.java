@@ -21,10 +21,12 @@ public class PatientsApplication {
 	@Bean
 	CommandLineRunner commandLineRunner(PatientRepository patientRepository) {
 		return args -> {
-			patientRepository.save(new Patient(null, "Hamza", new Date() , false, 23) ) ;
-			patientRepository.save(new Patient(null, "Zineb", new Date() , true, 181) ) ;
-			patientRepository.save(new Patient(null, "Brahim", new Date() , true, 45) ) ;
-			patientRepository.save(new Patient(null, "Amina", new Date() , false, 96) ) ;
+			patientRepository.save(new Patient(null, "Khalid", new Date() , false, 23) ) ;
+			patientRepository.save(new Patient(null, "Imane", new Date() , true, 181) ) ;
+			patientRepository.save(new Patient(null, "Mourad", new Date() , true, 45) ) ;
+			patientRepository.save(new Patient(null, "Chaimaa", new Date() , false, 96) ) ;
+			patientRepository.save(new Patient(null, "Kamal", new Date() , false, 63) ) ;
+			patientRepository.save(new Patient(null, "Yasmine", new Date() , false, 11) ) ;
 			
 			patientRepository.findAll().forEach(p->{
 				System.out.println(p.getNom());
