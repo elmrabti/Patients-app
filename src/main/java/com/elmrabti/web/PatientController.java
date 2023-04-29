@@ -51,6 +51,11 @@ public class PatientController {
 		return patientRepository.findAll() ;
 	}	
 	
+	@GetMapping(path = "/formPatients")
+	public String formPatients() {
+		return "formPatients";
+	}
+	
 	
 	
 
